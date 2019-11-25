@@ -1,0 +1,50 @@
+wget安装java
+wget http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz
+(需要自行确认网址是否变化)
+
+下载验证大小
+ls -lht
+
+解压
+tar -zxvf jdk-8u171-linux-x64.tar.gz -C /usr/local/java/
+
+修改/etc/profile
+export JAVA_HOME=/usr/local/java/jdk1.8.0_171
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+使其生效
+source /etc/profile
+
+添加软连接
+ln -s /usr/local/java/jdk1.8.0_171/bin/java /usr/bin/java
+
+yum安装java
+卸载系统自带java（可选）
+rpm -qa |grep java
+
+rpm -qa |grep jdk
+
+rpm -qa |grep gcj
+
+rpm -qa | grep java | xargs rpm -e --nodeps 
+
+安装（好像不必设置环境变量）
+yum install java-1.8.0-openjdk* -y
+
+安装路径在/usr/lib/jvm/
+
+
+yum快速安装maven
+wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+yum -y install apache-maven
+
+
+安装nodejs
+curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -
+sudo yum -y install nodejs
+
+安装失败时
+sudo yum clean all
+sudo rm -fv /etc/yum.repos.d/nodesource*
