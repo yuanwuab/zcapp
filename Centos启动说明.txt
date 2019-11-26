@@ -48,3 +48,21 @@ sudo yum -y install nodejs
 安装失败时
 sudo yum clean all
 sudo rm -fv /etc/yum.repos.d/nodesource*
+
+
+
+安装mycat,mycat官网 http://www.mycat.io/
+下载
+wget http://dl.mycat.io/1.6.6.1/Mycat-server-1.6.6.1-release-20181031195535-linux.tar.gz
+解压
+tar -zxvf Mycat-server-1.6.6.1-release-20181031195535-linux.tar.gz
+我这里将 mycat 放到“/usr/local/mycat/”目录下，你可以根据自己的需要选择合适的目录
+cp -r mycat /usr/local/mycat
+配置环境变量
+vi /etc/profile
+在文件末尾添加一行：
+export MYCAT_HOME=/usr/local/mycat
+使修改生效：
+source /etc/profile
+测试是否生效：
+echo $MYCAT_HOME
