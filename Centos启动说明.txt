@@ -66,3 +66,6 @@ export MYCAT_HOME=/usr/local/mycat
 source /etc/profile
 测试是否生效：
 echo $MYCAT_HOME
+
+安装keepalived
+https://blog.csdn.net/baidu_37781025/article/details/72400773
