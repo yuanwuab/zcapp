@@ -1,0 +1,17 @@
+主从复制的坑
+
+显示权限失败
+不能是all privilege，必须是repelication
+https://blog.csdn.net/snowhite91/article/details/102816441
+
+my.conf配置
+最低限度配置
+
+生效需要重启，reload好像不管用
+配置越多越容易出错而且看不懂
+
+mysql创建用户并赋权
+不知为何网上全是创建的同时赋权，但mysql8之后好像不能这么做了。必须分为
+create
+grant
+两部分
