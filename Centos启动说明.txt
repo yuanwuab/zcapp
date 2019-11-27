@@ -66,6 +66,8 @@ export MYCAT_HOME=/usr/local/mycat
 source /etc/profile
 测试是否生效：
 echo $MYCAT_HOME
+配置文件并整合到springboot
+https://blog.csdn.net/dingchang3060/article/details/80408765
 
 安装keepalived
 https://blog.csdn.net/baidu_37781025/article/details/72400773
