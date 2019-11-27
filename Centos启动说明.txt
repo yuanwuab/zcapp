@@ -69,6 +69,7 @@ echo $MYCAT_HOME
 配置文件并整合到springboot
 https://blog.csdn.net/dingchang3060/article/details/80408765
 https://www.jianshu.com/p/4e15cad5ce6a
+https://www.cnblogs.com/kevingrace/p/9365840.html
 
 安装keepalived
 https://blog.csdn.net/baidu_37781025/article/details/72400773
