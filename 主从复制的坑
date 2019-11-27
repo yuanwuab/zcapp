@@ -15,3 +15,6 @@ mysql创建用户并赋权
 create
 grant
 两部分
+
+设置master
+https://blog.csdn.net/jesseyoung/article/details/41942809
