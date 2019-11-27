@@ -18,3 +18,10 @@ grant
 
 设置master
 https://blog.csdn.net/jesseyoung/article/details/41942809
+
+一种主从报错折腾了我半天：
+Last_IO_Errno: 1236
+Last_IO_Error: Got fatal error 1236 from master when reading data from binary log: 'Could not open log file'
+后面修改主从同步相关 参数，确认原因是my.cnf增加了如下参数：
+log-bin = mysql-bin
+relay-log = mysql-bin
