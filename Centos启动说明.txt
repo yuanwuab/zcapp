@@ -49,6 +49,18 @@ sudo yum -y install nodejs
 sudo yum clean all
 sudo rm -fv /etc/yum.repos.d/nodesource*
 
+安装mysql
+安装yum源
+wget https://dev.mysql.com/get/mysql80-community-release-el7-1.noarch.rpm
+yum localinstall mysql80-community-release-el7-1.noarch.rpm
+安装（-y必需）
+yum install mysql-community-server -y
+
+启动并设置
+sudo service mysqld start
+cat /var/log/mysqld.log | grep password
+set global validate_password.policy=0;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'zcapp1234';
 
 
 安装mycat,mycat官网 http://www.mycat.io/
