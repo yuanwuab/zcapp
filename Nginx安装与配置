@@ -1,0 +1,19 @@
+安装依赖库
+yum -y install gcc zlib zlib-devel pcre-devel openssl openssl-devel
+
+查看版本
+http://nginx.org/download/
+
+下载tar包并解压
+cd /usr/local/
+mkdir nginx
+cd nginx
+wget http://nginx.org/download/***
+tar -xvf nginx-*.tar.g
+
+编译并安装
+./configure
+make && make install
+
+测试
+安装路径下的/nginx/sbin/nginx -t
