@@ -6,3 +6,7 @@ https://www.jianshu.com/p/e36e7ba82ff5
 
 https://www.cnblogs.com/qlqwjy/p/8562703.html
 https://blog.csdn.net/bntx2jsqfehy7/article/details/80649786
+
+redis
+https://blog.csdn.net/qq_33609401/article/details/85006205
+https://blog.csdn.net/larry_zeng1/article/details/80407201
